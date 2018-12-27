@@ -1,0 +1,16 @@
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\ESunBank.Models.dll.config
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\ESunBank.Models.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\ESunBank.Models.pdb
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\Dapper.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\EntityFramework.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\Dapper.xml
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\EntityFramework.xml
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\zh-Hant\EntityFramework.resources.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\bin\Release\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\obj\Release\ESunBank.Models.csprojAssemblyReference.cache
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\obj\Release\ESunBank.Models.csproj.CoreCompileInputs.cache
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\obj\Release\ESunBank.Models.csproj.CopyComplete
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\obj\Release\ESunBank.Models.dll
+C:\Users\john-tsai\Desktop\玉山銀行\ESUN GIT\ESunBank\ESunBank.Models\obj\Release\ESunBank.Models.pdb

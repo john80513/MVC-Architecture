@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NEC_ATM_FACE_PHOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HitRecordPhoto">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tid" Type="bigint" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="QueryImage" Type="varbinary(max)" Nullable="false" />
+    <Property Name="MemberPhoto" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLivenessPhoto">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tid" Type="bigint" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="QueryImage" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPhoto">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PhotoId" Type="int" />
+    <Property Name="MemberSN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PhotoData" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPhotoLog">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PhotoId" Type="int" />
+    <Property Name="MemberSN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PhotoData" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedUnits" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NEC_ATM_FACE_PHOModelStoreContainer">
+    <EntitySet Name="HitRecordPhoto" EntityType="Self.HitRecordPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLivenessPhoto" EntityType="Self.tblLivenessPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhoto" EntityType="Self.tblPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhotoLog" EntityType="Self.tblPhotoLog" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

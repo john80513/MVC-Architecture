@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NEC_ATM_FACE_PHOModelStoreContainer" CdmEntityContainer="NEC_ATM_FACE_PHOEntities">
+    <EntitySetMapping Name="HitRecordPhoto">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_PHOModel.HitRecordPhoto">
+        <MappingFragment StoreEntitySet="HitRecordPhoto">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="ATMId" ColumnName="ATMId" />
+          <ScalarProperty Name="QueryImage" ColumnName="QueryImage" />
+          <ScalarProperty Name="MemberPhoto" ColumnName="MemberPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLivenessPhoto">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_PHOModel.tblLivenessPhoto">
+        <MappingFragment StoreEntitySet="tblLivenessPhoto">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="ATMId" ColumnName="ATMId" />
+          <ScalarProperty Name="QueryImage" ColumnName="QueryImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPhoto">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_PHOModel.tblPhoto">
+        <MappingFragment StoreEntitySet="tblPhoto">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="MemberSN" ColumnName="MemberSN" />
+          <ScalarProperty Name="PhotoData" ColumnName="PhotoData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPhotoLog">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_PHOModel.tblPhotoLog">
+        <MappingFragment StoreEntitySet="tblPhotoLog">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="MemberSN" ColumnName="MemberSN" />
+          <ScalarProperty Name="PhotoData" ColumnName="PhotoData" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedUnits" ColumnName="ModifiedUnits" />
+          <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+          <ScalarProperty Name="ModifiedType" ColumnName="ModifiedType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

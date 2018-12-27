@@ -1,0 +1,33 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+
+@foreach (var node in Model.Nodes)
+{
+    if (node.Children.Any())
+    {
+        <li class="has_sub">
+            <a href="javascript:;" title=@Html.DisplayFor(m => node.Title)>
+                <i class="fa fa-tasks"></i> @Html.DisplayFor(m => node.Title)  <span class="pull-right"><i class="fa fa-chevron-right"></i></span>
+            </a>
+
+            <ul>
+                @Html.DisplayFor(m => node.Children)
+            </ul>
+
+        </li>
+    }
+    else if (node.Title == "系統設定"||node.Title == "密碼修改")
+    {
+
+    }
+    else
+    {
+        <li>
+        <a href="@node.Url" title= @Html.DisplayFor(m => node.Title)>
+            <i class="fa fa-file-o"></i>  @Html.DisplayFor(m => node.Title)
+        </a>
+        </li>
+    }
+}

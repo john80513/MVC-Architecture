@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="首頁"  clickable="false">   
+    
+      <mvcSiteMapNode title="帳號權限管理" controller="Authorization" action="UserIndex"/>
+      <mvcSiteMapNode title="群組管理" controller="Authorization" action="GroupIndex"/>
+      <mvcSiteMapNode title="新增帳號權限" controller="Authorization" action="CreateUser"/>
+    <mvcSiteMapNode title="密碼修改" controller="Password" action="Change"/>
+  <mvcSiteMapNode title="登出" controller="Account" action="LogOff"/>
+
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

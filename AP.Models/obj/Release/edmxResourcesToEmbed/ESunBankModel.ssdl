@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NEC_ATM_FACE_APModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblATM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ATMName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="500" />
+    <Property Name="Ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MacAddr" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Md5" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Privilege" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Level" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblHitRecords">
+    <Key>
+      <PropertyRef Name="HitId" />
+    </Key>
+    <Property Name="HitId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tid" Type="bigint" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Idno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Score" Type="float" Nullable="false" />
+    <Property Name="Threshold" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Match" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLiveness">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HitId" Type="int" />
+    <Property Name="Tid" Type="bigint" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Idno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LivenessScore" Type="float" Nullable="false" />
+    <Property Name="Threshold" Type="float" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMatch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idno_1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Idno_2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Score" Type="float" Nullable="false" />
+    <Property Name="Threshold" Type="float" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMatchSchedule">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="FeatureLogSN" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblOperateLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActionTime" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Action" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ActionContent" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Flag" Type="varchar" MaxLength="1" />
+    <Property Name="DeviceId" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblParameter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProfile">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberSN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Idno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProfileLog">
+    <Key>
+      <PropertyRef Name="SN" />
+    </Key>
+    <Property Name="SN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberSN" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Idno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ATMId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedUnits" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="250" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModifiedTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NEC_ATM_FACE_APModelStoreContainer">
+    <EntitySet Name="tblATM" EntityType="Self.tblATM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblGroup" EntityType="Self.tblGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHitRecords" EntityType="Self.tblHitRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLiveness" EntityType="Self.tblLiveness" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMatch" EntityType="Self.tblMatch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMatchSchedule" EntityType="Self.tblMatchSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOperateLog" EntityType="Self.tblOperateLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblParameter" EntityType="Self.tblParameter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProfile" EntityType="Self.tblProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProfileLog" EntityType="Self.tblProfileLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

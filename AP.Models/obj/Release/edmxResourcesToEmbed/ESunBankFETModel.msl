@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NEC_ATM_FACE_FETModelStoreContainer" CdmEntityContainer="NEC_ATM_FACE_FETEntities">
+    <EntitySetMapping Name="tblFeature">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_FETModel.tblFeature">
+        <MappingFragment StoreEntitySet="tblFeature">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
+          <ScalarProperty Name="MemberSN" ColumnName="MemberSN" />
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="FeatureData" ColumnName="FeatureData" />
+          <ScalarProperty Name="QualityScore" ColumnName="QualityScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFeatureLog">
+      <EntityTypeMapping TypeName="NEC_ATM_FACE_FETModel.tblFeatureLog">
+        <MappingFragment StoreEntitySet="tblFeatureLog">
+          <ScalarProperty Name="SN" ColumnName="SN" />
+          <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
+          <ScalarProperty Name="MemberSN" ColumnName="MemberSN" />
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="FeatureData" ColumnName="FeatureData" />
+          <ScalarProperty Name="QualityScore" ColumnName="QualityScore" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedUnits" ColumnName="ModifiedUnits" />
+          <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+          <ScalarProperty Name="ModifiedType" ColumnName="ModifiedType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

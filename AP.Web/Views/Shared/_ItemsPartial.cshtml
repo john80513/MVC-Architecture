@@ -1,0 +1,16 @@
+﻿@model AP.Web.Service.ViewModels.PartialNameModel
+
+@{
+    Layout = null;
+}
+
+@if (!String.IsNullOrEmpty(Model.ParaKey))
+{
+    foreach (var item in Model.ddl)
+    {
+        if (Model.ParaKey == item.Value)
+        {
+            @Html.DisplayFor(modelItem => item.Text)
+        }
+    }
+}
